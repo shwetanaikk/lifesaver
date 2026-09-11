@@ -1693,22 +1693,47 @@ export default function App() {
             border-radius:3px;
           }
           select option { background:#1a1a2e; color:#e5e7eb; }
-          @media (max-width: 600px) {
-  body {
+      @media (max-width: 600px) {
+  html, body, #root {
+    width: 100% !important;
+    max-width: 100% !important;
     overflow-x: hidden !important;
   }
 
+  /* Navbar */
   nav {
     padding: 0 8px !important;
   }
 
   nav > div {
-    flex-wrap: wrap !important;
     height: auto !important;
-    padding: 8px 0 !important;
-    gap: 8px !important;
+    min-height: 64px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
   }
 
+  /* Hero and other 2-column sections */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Blood groups */
+  div[style*="repeat(8,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* 3-column sections */
+  div[style*="repeat(3,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer */
+  div[style*="2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hero heading */
   h1 {
     font-size: 38px !important;
   }
@@ -1716,7 +1741,17 @@ export default function App() {
   h2 {
     font-size: 28px !important;
   }
-}
+
+  /* Hero buttons */
+  div[style*="display: flex"] {
+    max-width: 100% !important;
+  }
+
+  button {
+    max-width: 100% !important;
+  }
+}   
+  }
         `}</style>
 
         
