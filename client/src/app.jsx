@@ -1693,8 +1693,33 @@ export default function App() {
             border-radius:3px;
           }
           select option { background:#1a1a2e; color:#e5e7eb; }
+          @media (max-width: 600px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  nav {
+    padding: 0 8px !important;
+  }
+
+  nav > div {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 8px 0 !important;
+    gap: 8px !important;
+  }
+
+  h1 {
+    font-size: 38px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+}
         `}</style>
 
+        
         <Navbar page={page} setPage={setPage} darkMode={darkMode} setDarkMode={setDarkMode}/>
         {renderPage()}
         <Footer darkMode={darkMode}/>
