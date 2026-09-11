@@ -1718,6 +1718,10 @@ export default function App() {
     grid-template-columns: 1fr !important;
   }
 
+/* Contact page */
+div[style*="grid-template-columns: 1fr 2fr"] {
+  grid-template-columns: 1fr !important;
+}
   /* Blood groups */
   div[style*="repeat(8,1fr)"] {
     grid-template-columns: repeat(2, 1fr) !important;
